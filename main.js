@@ -175,12 +175,12 @@ class Time {
 //////////*6*//////////
 /*
 class Person {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+  constructor(name, address) {
+    this.name = name;
+    this.address = address;
   }
   getFullName() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.name} ${this.address}`;
   }
 }
 
