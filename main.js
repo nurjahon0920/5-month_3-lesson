@@ -287,3 +287,45 @@ try {
 }
 */
 //////////*10*/////////
+/*
+class Person {
+  constructor(housePrice, housesNumber, carPrice, carsNumber, bankAccount) {
+    this.housePrice = housePrice;
+    this.housesNumber = housesNumber;
+    this.carPrice = carPrice;
+    this.carsNumber = carsNumber;
+    this.bankAccount = bankAccount;
+  }
+
+  getWealth() {
+    let totalHouseValue = this.housePrice * this.housesNumber;
+    let totalCarValue = this.carPrice * this.carsNumber;
+    let totalWealth = totalHouseValue + totalCarValue + this.bankAccount;
+    return totalWealth;
+  }
+}
+class RichPerson extends Person {
+  constructor(
+    housePrice,
+    housesNumber,
+    carPrice,
+    carsNumber,
+    bankAccount,
+    companyPrice,
+    companiesNumber,
+    investigation
+  ) {
+    super(housePrice, housesNumber, carPrice, carsNumber, bankAccount);
+    this.companyPrice = companyPrice;
+    this.companiesNumber = companiesNumber;
+    this.investigation = investigation;
+  }
+
+  getWealth() {
+    let baseWealth = super.getWealth();
+    let totalCompanyValue = this.companyPrice * this.companiesNumber;
+    let totalWealth = baseWealth + totalCompanyValue + this.investigation;
+    return totalWealth;
+  }
+}
+*/
