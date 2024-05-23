@@ -32,58 +32,55 @@ class Employee {
   #firstName;
   #lastName;
   #salary;
-
   constructor(id, firstName, lastName, salary) {
     this.#id = id;
     this.#firstName = firstName;
     this.#lastName = lastName;
     this.#salary = salary;
   }
-
   getId() {
     return this.#id;
   }
-
   getFirstName() {
     return this.#firstName;
   }
-
   getLastName() {
     return this.#lastName;
   }
-
   getSalary() {
     return this.#salary;
   }
-
   setId(id) {
     this.#id = id;
   }
-
   setFirstName(fName) {
     this.#firstName = fName;
   }
-
   setLastName(lName) {
     this.#lastName = lName;
   }
-
   setSalary(s) {
     this.#salary = s;
   }
-
   getFullName() {
     return `${this.#firstName} ${this.#lastName}`;
   }
-
   getAnnualSalary() {
     return this.#salary * 12;
   }
-
   raiseSalary(percent) {
     this.#salary += this.#salary * (percent / 100);
   }
 }
+const employee = new Employee(1, "Bobur", "Sobir", 5000);
+console.log(employee.getId()); // 1
+console.log(employee.getFirstName());
+console.log(employee.getLastName());
+console.log(employee.getSalary());
+console.log(employee.getFullName());
+console.log(employee.getAnnualSalary());
+employee.raiseSalary(10);
+console.log(employee.getSalary());
 */
 //////////*3*//////////
 /*
@@ -219,12 +216,74 @@ console.log(es.getInfo());
 //////////*7*//////////
 
 //////////8*//////////
-
-//////////*9*//////////
-class CustomArray {
-  constructor() {
-    this.arr = [];
+/*
+class CustomDate {
+  #day;
+  #month;
+  #year;
+  constructor(day, month, year) {
+    this.#day = day;
+    this.#month = month;
+    this.#year = year;
   }
-  isNumberArray() {}
+  static customKeys(obj) {
+    return Object.keys(obj);
+  }
+  static customValues(obj) {
+    return Object.values(obj);
+  }
+  static customEntries(obj) {
+    return Object.entries(obj);
+  }
 }
+const obj = { a: 1, b: 2, c: 3 };
+console.log(CustomDate.customKeys(obj));
+console.log(CustomDate.customValues(obj));
+console.log(CustomDate.customEntries(obj));
+*/
+//////////*9*//////////
+/*
+class CustomArray {
+  #array;
+  constructor(arr) {
+    if (Array.isArray(arr) || arr.some((item) => typeof item !== "number")) {
+      throw new Error("Massiv faqat raqamlardan iborat bo`lishi kerak");
+    }
+    this.#array = arr;
+  }
+  static isNumberArray(arr) {
+    return Array.isArray(arr) && arr.every((item) => typeof item === "number");
+  }
+  static sum(arr) {
+    if (!CustomArray.isNumberArray(arr)) {
+      throw new Error("Massiv faqat raqamlardan iborat bo`lishi kerak");
+    }
+    return arr.reduce((acc, val) => acc + val, 0);
+  }
+  static max(arr) {
+    if (!CustomArray.isNumberArray(arr)) {
+      throw new Error("Massiv faqat raqamlardan iborat bo`lishi kerak");
+    }
+    return Math.max(...arr);
+  }
+  static min(arr) {
+    if (!CustomArray.isNumberArray(arr)) {
+      throw new Error("Massiv faqat raqamlardan iborat bo`lishi kerak");
+    }
+    return Math.min(...arr);
+  }
+}
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [1, 2, "three", 4, 5];
+console.log(CustomArray.isNumberArray(arr1));
+console.log(CustomArray.isNumberArray(arr2));
+console.log(`Yig'indi: ${CustomArray.sum(arr1)}`);
+console.log(`Max: ${CustomArray.max(arr1)}`);
+console.log(`Min: ${CustomArray.min(arr1)}`);
+try {
+  console.log(CustomArray.sum(arr2));
+} catch (error) {
+  console.error(error.message);
+}
+*/
 //////////*10*/////////
