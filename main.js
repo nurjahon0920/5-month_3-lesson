@@ -72,7 +72,7 @@ class Employee {
     this.#salary += this.#salary * (percent / 100);
   }
 }
-const employee = new Employee(1, "Bobur", "Sobir", 5000);
+let employee = new Employee(1, "Shokir", "Jobir", 6974);
 console.log(employee.getId()); // 1
 console.log(employee.getFirstName());
 console.log(employee.getLastName());
@@ -214,8 +214,7 @@ console.log(es);
 console.log(es.getInfo());
 */
 //////////*7*//////////
-
-//////////8*//////////
+//////////*8*//////////
 /*
 class CustomDate {
   #day;
@@ -274,7 +273,7 @@ class CustomArray {
   }
 }
 const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [1, 2, "three", 4, 5];
+const arr2 = [1, 2, 3, 4, "five"];
 console.log(CustomArray.isNumberArray(arr1));
 console.log(CustomArray.isNumberArray(arr2));
 console.log(`Yig'indi: ${CustomArray.sum(arr1)}`);
