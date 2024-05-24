@@ -72,7 +72,7 @@ class Employee {
     this.#salary += this.#salary * (percent / 100);
   }
 }
-const employee = new Employee(1, "Bobur", "Sobir", 5000);
+let employee = new Employee(1, "Shokir", "Jobir", 6974);
 console.log(employee.getId()); // 1
 console.log(employee.getFirstName());
 console.log(employee.getLastName());
@@ -175,12 +175,12 @@ class Time {
 //////////*6*//////////
 /*
 class Person {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+  constructor(name, address) {
+    this.name = name;
+    this.address = address;
   }
   getFullName() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.name} ${this.address}`;
   }
 }
 
@@ -214,8 +214,7 @@ console.log(es);
 console.log(es.getInfo());
 */
 //////////*7*//////////
-
-//////////8*//////////
+//////////*8*//////////
 /*
 class CustomDate {
   #day;
@@ -274,7 +273,7 @@ class CustomArray {
   }
 }
 const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [1, 2, "three", 4, 5];
+const arr2 = [1, 2, 3, 4, "five"];
 console.log(CustomArray.isNumberArray(arr1));
 console.log(CustomArray.isNumberArray(arr2));
 console.log(`Yig'indi: ${CustomArray.sum(arr1)}`);
@@ -287,3 +286,45 @@ try {
 }
 */
 //////////*10*/////////
+/*
+class Person {
+  constructor(housePrice, housesNumber, carPrice, carsNumber, bankAccount) {
+    this.housePrice = housePrice;
+    this.housesNumber = housesNumber;
+    this.carPrice = carPrice;
+    this.carsNumber = carsNumber;
+    this.bankAccount = bankAccount;
+  }
+
+  getWealth() {
+    let totalHouseValue = this.housePrice * this.housesNumber;
+    let totalCarValue = this.carPrice * this.carsNumber;
+    let totalWealth = totalHouseValue + totalCarValue + this.bankAccount;
+    return totalWealth;
+  }
+}
+class RichPerson extends Person {
+  constructor(
+    housePrice,
+    housesNumber,
+    carPrice,
+    carsNumber,
+    bankAccount,
+    companyPrice,
+    companiesNumber,
+    investigation
+  ) {
+    super(housePrice, housesNumber, carPrice, carsNumber, bankAccount);
+    this.companyPrice = companyPrice;
+    this.companiesNumber = companiesNumber;
+    this.investigation = investigation;
+  }
+
+  getWealth() {
+    let baseWealth = super.getWealth();
+    let totalCompanyValue = this.companyPrice * this.companiesNumber;
+    let totalWealth = baseWealth + totalCompanyValue + this.investigation;
+    return totalWealth;
+  }
+}
+*/
